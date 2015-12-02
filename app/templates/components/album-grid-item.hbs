@@ -1,0 +1,22 @@
+<div class="frame">
+	{{#link-to 'tracks.info' album.key}}
+    <img src="{{album.dynamicIcon}}">
+    <h2>{{ album.artist }} - {{ album.name }}</h2>
+  {{/link-to}}
+</div>
+
+{{#if isActive}}
+<div class="detail-container">
+	<i class="detail-container__triangle"></i>
+  <div class ="detail">
+  	<h1>{{ album.name }}</h1>
+		<h3>{{ album.artist }}</h3>
+
+    <ul class="tracks-list">
+      {{#each activeAlbum.album.tracks as |track|}}
+        <li><span class="track-name">{{track.name}}</span> - {{duration-to-mins track.duration}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{/if}}

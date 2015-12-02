@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  margin: 12px 16px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+}
+
+.top-charts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-chart__item {
+  padding: 1rem;
+  margin: 0;
+  flex: 0 0 calc(100% / 2);
+}
+
+.top-chart__item img {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.top-chart__item h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100%);
+
+  font-weight: normal;
+  font-size: 1rem;
+  color: #dedede;
+  background: rgba(0, 0, 0, 0.3);
+
+  padding: 0.4rem;
+  margin: 0;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+.frame {
+  position: relative;
+  display: block;
+}
+
+.detail-container {
+  margin-top: 1rem;
+  height: 200px;
+}
+
+.detail-container__triangle {
+  display: block;
+  position: relative;
+	content: "";
+  width: 100%;
+  height: 5px;
+}
+
+.detail-container__triangle::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1rem 1rem;
+  border-color: transparent transparent #aaa transparent;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.detail {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #aaa;
+  height: 200px;
+  padding: 0.5rem 2rem;
+}
+
+.detail h1 {
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+.detail h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  margin: 0.5rem 0;
+  padding: 0;
+
+  height: 7rem;
+  width: 100%;
+}
+
+.tracks-list li {
+  display: block;
+  margin: 0;
+  width: 20rem;
+
+  margin-right: 2rem;
+}
